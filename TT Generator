@@ -1,0 +1,28 @@
+#make a sentence to a trump sentence 
+import random
+
+sentence = input ("Insert simple sentence: ")
+tr_adj_pos = ["tremendous", "huge", "huge huge", "very good", "fine"]
+#tr_adj_neg = ["bad", "ugly"]
+tr_adding = ["I've seen it. It was amazing.", "I knew since long before i was born.", "The best I've seen.", "China could not have done it better."]
+
+stl = sentence.split(" ")
+#makes list of input string
+
+r = random.randint(0,len(tr_adj_pos)-1)
+insert = tr_adj_pos[r]
+#chooses random word of the list tr_adj_pos
+
+stl.insert(-1, insert)
+#inserts random word to the list
+
+ausgabe = ' '.join(stl)
+
+n = random.randint(0,len(tr_adding)-1)
+adding = tr_adding[n]
+#choosing a random tr_adding
+
+ausgabe = ausgabe + ". " + adding
+#adds random adding as string to the converted string
+
+print(ausgabe)
